@@ -1,0 +1,449 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script>
+  if (localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('light');
+  } else {
+    document.documentElement.classList.add('light');
+    document.documentElement.classList.remove('dark');
+  }
+</script>
+<title>Psychology &amp; Code Explorer // Verified Scholastic Identity</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Google Fonts: Space Grotesk & Bricolage Grotesque -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;700;800&amp;family=Space+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "tertiary-fixed": "#ffdad9",
+            "outline-variant": "#cdc7ae",
+            "secondary-fixed-dim": "#62dcad",
+            "surface-tint": "#6b5f00",
+            "secondary": "#006c4e",
+            "surface-container-high": "#e1e8fd",
+            "inverse-surface": "#293040",
+            "on-tertiary-container": "#995253",
+            "surface-dim": "#d3daef",
+            "secondary-container": "#80f9c8",
+            "primary-fixed-dim": "#ddc734",
+            "on-primary-fixed-variant": "#504700",
+            "on-background": "#141b2b",
+            "primary": "#6b5f00",
+            "on-tertiary": "#ffffff",
+            "error-container": "#ffdad6",
+            "surface-variant": "#dce2f7",
+            "on-tertiary-fixed-variant": "#723335",
+            "tertiary-container": "#ffdfde",
+            "on-error": "#ffffff",
+            "surface-container-low": "#f1f3ff",
+            "surface-bright": "#f9f9ff",
+            "error": "#ba1a1a",
+            "on-primary": "#ffffff",
+            "tertiary-fixed-dim": "#ffb3b2",
+            "on-secondary-fixed-variant": "#00513a",
+            "surface-container-highest": "#dce2f7",
+            "on-secondary-fixed": "#002115",
+            "surface-container-lowest": "#ffffff",
+            "on-primary-fixed": "#201c00",
+            "background": "#f9f9ff",
+            "on-secondary-container": "#007353",
+            "inverse-on-surface": "#edf0ff",
+            "inverse-primary": "#ddc734",
+            "on-surface": "#141b2b",
+            "primary-fixed": "#fbe44f",
+            "primary-container": "#ffe853",
+            "on-tertiary-fixed": "#3a090d",
+            "on-secondary": "#ffffff",
+            "surface": "#f9f9ff",
+            "on-surface-variant": "#4b4734",
+            "tertiary": "#8f4a4b",
+            "secondary-fixed": "#80f9c8",
+            "surface-container": "#e9edff",
+            "on-error-container": "#93000a",
+            "outline": "#7c7762",
+            "on-primary-container": "#746700"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "gutter-mobile": "0.75rem",
+            "margin-mobile": "1rem",
+            "space-xl": "2.25rem",
+            "space-lg": "1.5rem",
+            "gutter": "1rem",
+            "margin": "2rem",
+            "space-md": "1rem"
+          },
+          "fontFamily": {
+            "body-md": ["Space Grotesk"],
+            "display-mobile": ["Bricolage Grotesque"],
+            "headline-lg": ["Bricolage Grotesque"],
+            "body-sm": ["Space Grotesk"],
+            "metric-number": ["Bricolage Grotesque"],
+            "label-lg": ["Space Grotesk"],
+            "body-lg": ["Space Grotesk"],
+            "headline-sm": ["Bricolage Grotesque"],
+            "label-sm": ["Space Grotesk"],
+            "display": ["Bricolage Grotesque"],
+            "headline-lg-mobile": ["Bricolage Grotesque"],
+            "headline-md": ["Bricolage Grotesque"]
+          },
+          "fontSize": {
+            "body-md": ["14px", { "lineHeight": "20px", "fontWeight": "500" }],
+            "display-mobile": ["36px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+            "headline-lg": ["32px", { "lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+            "body-sm": ["12px", { "lineHeight": "16px", "fontWeight": "400" }],
+            "metric-number": ["36px", { "lineHeight": "36px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "label-lg": ["13px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "700" }],
+            "body-lg": ["16px", { "lineHeight": "24px", "fontWeight": "500" }],
+            "headline-sm": ["18px", { "lineHeight": "24px", "fontWeight": "600" }],
+            "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.06em", "fontWeight": "700" }],
+            "display": ["48px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "800" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+            "headline-md": ["22px", { "lineHeight": "28px", "fontWeight": "700" }]
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1;
+    }
+    .bg-grid-pattern {
+      background-size: 24px 24px;
+      background-image: 
+        linear-gradient(to right, rgba(17, 24, 39, 0.07) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(17, 24, 39, 0.07) 1px, transparent 1px);
+    }
+    .dark .bg-grid-pattern {
+      background-image: 
+        linear-gradient(to right, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    }
+  </style>
+</head>
+<body class="bg-[#FAF8F5] dark:bg-[#0B0F19] bg-grid-pattern min-h-screen text-on-surface dark:text-[#F3F4F6] font-body-md flex flex-col justify-between antialiased selection:bg-primary-container selection:text-on-primary-container transition-colors duration-200">
+<!-- Floating Dark/Light Mode Toggle Button -->
+<div class="fixed top-4 right-4 sm:top-5 sm:right-6 z-50">
+  <button id="theme-toggle" class="flex items-center gap-2 px-3.5 py-1.5 rounded-full border-[2px] border-on-surface dark:border-white bg-[#FEF08A] hover:bg-[#FDE047] dark:bg-[#1E293B] text-on-surface dark:text-[#FEF08A] shadow-[3px_3px_0px_#111827] dark:shadow-[3px_3px_0px_#FEF08A] text-xs font-bold hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 transition-all cursor-pointer select-none" title="切換深淺模式" aria-label="切換深淺模式">
+    <span class="material-symbols-outlined text-base" id="theme-icon">dark_mode</span>
+    <span class="font-mono text-xs font-bold tracking-wider" id="theme-text">DARK MODE</span>
+  </button>
+</div>
+
+<!-- Main Content Canvas -->
+<main class="w-full flex-grow px-margin-mobile md:px-margin py-8 md:py-12 flex items-center justify-center">
+<!-- Neo-Brutalist Master Profile Card -->
+<section class="w-full max-w-4xl bg-surface-container-lowest dark:bg-[#151D2C] rounded-2xl border-[2.5px] border-on-surface dark:border-white shadow-[6px_6px_0px_#111827] dark:shadow-[6px_6px_0px_#FEF08A] overflow-hidden p-6 sm:p-8 md:p-10 relative transition-colors duration-200">
+<!-- Card Top Ribbon Decor -->
+<div class="flex flex-wrap items-center justify-between border-b-[2.5px] border-on-surface dark:border-white pb-4 mb-8 gap-3">
+<div class="flex items-center gap-2">
+<span class="inline-block w-3.5 h-3.5 rounded-full bg-[#EF4444] border-[2px] border-on-surface dark:border-white"></span>
+<span class="inline-block w-3.5 h-3.5 rounded-full bg-[#F59E0B] border-[2px] border-on-surface dark:border-white"></span>
+<span class="inline-block w-3.5 h-3.5 rounded-full bg-[#10B981] border-[2px] border-on-surface dark:border-white"></span>
+<span class="text-label-sm font-label-sm text-outline dark:text-slate-400 font-bold ml-2 tracking-widest hidden sm:inline-block">AUTH_STATE // VERIFIED_IDENTITY</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container border-[2px] border-on-surface dark:border-white text-label-sm font-label-sm text-on-surface dark:text-black font-bold shadow-[2px_2px_0px_#111827] dark:shadow-[2px_2px_0px_#ffffff]">
+            2025-2026 SCHOLASTIC
+          </span>
+<div class="hidden sm:flex items-center space-x-0.5 text-on-surface dark:text-white font-mono text-[9px] font-bold tracking-tighter">
+<span class="">|||</span><span class="">|</span><span class="">||</span><span class="">||||</span><span class="">|</span><span class="">|||</span>
+</div>
+</div>
+</div>
+<!-- Two-Column Top & Middle Section -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-start">
+<!-- Left Column (approx 35% -> 4 or 5 cols out of 12) -->
+<div class="md:col-span-5 lg:col-span-4 flex flex-col items-center sm:items-start gap-4">
+<!-- Avatar Frame -->
+<div class="w-48 h-48 sm:w-56 sm:h-56 rounded-xl border-[2.5px] border-on-surface dark:border-white shadow-[4px_4px_0px_#111827] dark:shadow-[4px_4px_0px_#ffffff] overflow-hidden bg-[#FFE58F] relative group flex-shrink-0">
+<img alt="Student profile thumbnail" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105" src="./avatar.jpg">
+<div class="absolute bottom-2 right-2 bg-surface-container-lowest dark:bg-[#0B0F19] border-[2px] border-on-surface dark:border-white rounded-md px-1.5 py-0.5 shadow-[2px_2px_0px_#111827] dark:shadow-[2px_2px_0px_#ffffff] text-label-sm font-label-sm text-on-surface dark:text-white font-bold">
+              ID: 2026-PSY-CS
+            </div>
+</div>
+<!-- Status Pill -->
+<div class="w-full border-[2px] border-on-surface dark:border-white shadow-[2px_2px_0px_#111827] dark:shadow-[2px_2px_0px_#ffffff] px-3.5 py-1.5 rounded-full bg-[#D9F99D] dark:bg-[#064E3B] text-xs font-bold text-on-surface dark:text-[#A7F3D0] flex items-center justify-center sm:justify-start gap-2 hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-150">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse inline-block"></span>
+<span class="">Exploring Human Mind, C++ &amp; Financial Markets</span>
+</div>
+<!-- Location Tag -->
+<div class="w-full border-[2px] border-on-surface dark:border-white shadow-[2px_2px_0px_#111827] dark:shadow-[2px_2px_0px_#ffffff] px-3.5 py-1.5 rounded-full bg-surface-container-lowest dark:bg-[#0B0F19] text-xs font-bold text-on-surface dark:text-white flex items-center justify-center sm:justify-start gap-1.5">
+<span class="material-symbols-outlined text-base text-tertiary" data-icon="location_on">location_on</span>
+<span class="">Taiwan (University Campus Vicinity)</span>
+</div>
+<!-- Clickable Email Pill -->
+<a class="w-full border-[2px] border-on-surface dark:border-white shadow-[2px_2px_0px_#111827] dark:shadow-[2px_2px_0px_#ffffff] px-3.5 py-2 rounded-full bg-[#FEF08A] hover:bg-[#FDE047] dark:bg-[#854D0E] dark:hover:bg-[#A16207] text-xs font-bold text-on-surface dark:text-[#FEF08A] flex items-center justify-between hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 transition-all duration-150 group" href="mailto:student.psych@university.edu.tw" id="email-copy-pill" title="Click to send email, or copy">
+<div class="flex items-center gap-1.5 truncate">
+<span class="material-symbols-outlined text-base" data-icon="mail">mail</span>
+<span class="truncate">student.psych@university.edu.tw</span>
+</div>
+<span class="material-symbols-outlined text-sm bg-surface-container-lowest dark:bg-[#0B0F19] border border-on-surface dark:border-white rounded p-0.5 group-hover:rotate-12 transition-transform" data-icon="content_copy">content_copy</span>
+</a>
+<!-- Static Action Button (Download CV) -->
+
+</div>
+<!-- Right Column (approx 65% -> 7 or 8 cols out of 12) -->
+<div class="md:col-span-7 lg:col-span-8 flex flex-col justify-between gap-5">
+<!-- Header & Tagline -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="border-[2px] border-on-surface dark:border-white shadow-[2px_2px_0px_#111827] dark:shadow-[2px_2px_0px_#ffffff] bg-surface-container-high dark:bg-[#1E293B] px-2.5 py-1 rounded-md text-label-sm font-label-sm font-bold text-on-surface dark:text-white tracking-wider font-mono">
+                STUDENT ID: #2025-PSY
+              </span>
+
+</div>
+<h1 class="text-4xl sm:text-5xl font-black text-on-surface dark:text-white tracking-tight font-display mt-3">
+              Psychology &amp; Tech Explorer
+            </h1>
+<div class="inline-flex items-center flex-wrap gap-2 pt-1">
+<span class="bg-primary-container dark:bg-[#CA8A04] border-[2px] border-on-surface dark:border-white shadow-[2px_2px_0px_#111827] dark:shadow-[2px_2px_0px_#ffffff] px-3 py-1 rounded-lg text-body-md font-body-md font-bold text-on-surface dark:text-white">
+                Department of Psychology • Multidisciplinary Researcher
+              </span>
+</div>
+</div>
+<!-- Bio -->
+<p class="text-body-lg font-body-lg text-on-surface dark:text-slate-200 leading-relaxed border-l-[3.5px] border-on-surface dark:border-white pl-3.5 py-1">
+            Exploring the intersection of human behavior, social psychology, and computer science. Passionate about object-oriented programming in C++, quantitative research, and analyzing market trends.
+          </p>
+<!-- Motto / Campus Club Callout Box -->
+<div class="bg-[#FEF9C3] dark:bg-[#1E293B] border-[2px] border-on-surface dark:border-white shadow-[3px_3px_0px_#111827] dark:shadow-[3px_3px_0px_#ffffff] rounded-xl p-4 flex items-start gap-3 relative">
+<span class="text-2xl select-none">💬</span>
+<div class="text-body-md font-body-md text-on-surface dark:text-slate-200">
+<span class="font-bold block text-headline-sm font-headline-sm mb-0.5 text-on-surface dark:text-white">Personal Motto &amp; Academic Focus:</span>
+              "Understanding the mind, mastering the code." Passionate about musical theatre, quantitative analysis, and strength training.
+            </div>
+</div>
+<!-- Generic Tags Row -->
+<div>
+<div class="text-label-sm font-label-sm font-bold uppercase tracking-wider text-outline dark:text-slate-400 mb-2">Key Competencies &amp; Focus</div>
+<div class="flex flex-wrap gap-2"><span class="px-3 py-1.5 rounded-full border-[2px] border-on-surface dark:border-white bg-[#80F9C8] text-xs font-bold shadow-[2px_2px_0px_#111827] dark:shadow-[2px_2px_0px_#ffffff] whitespace-nowrap text-black">#Psychology</span>
+<span class="px-3 py-1.5 rounded-full border-[2px] border-on-surface dark:border-white bg-[#FFE853] text-xs font-bold shadow-[2px_2px_0px_#111827] dark:shadow-[2px_2px_0px_#ffffff] whitespace-nowrap text-black">#CppProgramming</span>
+<span class="px-3 py-1.5 rounded-full border-[2px] border-on-surface dark:border-white bg-[#FFDAD6] text-xs font-bold shadow-[2px_2px_0px_#111827] dark:shadow-[2px_2px_0px_#ffffff] whitespace-nowrap text-black">#SocialPsychology</span>
+<span class="px-3 py-1.5 rounded-full border-[2px] border-on-surface dark:border-white bg-[#BAE6FD] text-xs font-bold shadow-[2px_2px_0px_#111827] dark:shadow-[2px_2px_0px_#ffffff] whitespace-nowrap text-black">#DataAnalysis</span>
+<span class="px-3 py-1.5 rounded-full border-[2px] border-on-surface dark:border-white bg-[#DDD6FE] text-xs font-bold shadow-[2px_2px_0px_#111827] dark:shadow-[2px_2px_0px_#ffffff] whitespace-nowrap text-black">#FinancialMarkets</span>
+<span class="px-3 py-1.5 rounded-full border-[2px] border-on-surface dark:border-white bg-[#FED7AA] text-xs font-bold shadow-[2px_2px_0px_#111827] dark:shadow-[2px_2px_0px_#ffffff] whitespace-nowrap text-black">#MusicalTheatre</span></div>
+</div>
+<!-- Social Links Grid -->
+<div>
+<div class="text-label-sm font-label-sm font-bold uppercase tracking-wider text-outline dark:text-slate-400 mb-2">Connect &amp; Follow Along</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
+<!-- GitHub -->
+<a class="border-[2px] border-on-surface dark:border-white shadow-[2.5px_2.5px_0px_#111827] dark:shadow-[2.5px_2.5px_0px_#ffffff] rounded-lg px-3 py-2 bg-surface-container-lowest dark:bg-[#0B0F19] hover:bg-[#F3E8FF] dark:hover:bg-[#1E293B] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 transition-all duration-150 flex items-center justify-between group" href="https://github.com" target="_blank" rel="noopener noreferrer">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg text-[#111827] dark:text-white" data-icon="code">code</span>
+<span class="text-label-sm font-label-sm font-bold text-on-surface dark:text-white">GitHub</span>
+</div>
+<span class="text-xs text-outline dark:text-slate-400 font-mono group-hover:text-on-surface dark:group-hover:text-white">@cpp-psych-lab</span>
+</a>
+<!-- LinkedIn -->
+<a class="border-[2px] border-on-surface dark:border-white shadow-[2.5px_2.5px_0px_#111827] dark:shadow-[2.5px_2.5px_0px_#ffffff] rounded-lg px-3 py-2 bg-surface-container-lowest dark:bg-[#0B0F19] hover:bg-[#E0F2FE] dark:hover:bg-[#1E293B] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 transition-all duration-150 flex items-center justify-between group" href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg text-[#0284C7]" data-icon="work">work</span>
+<span class="text-label-sm font-label-sm font-bold text-on-surface dark:text-white">LinkedIn</span>
+</div>
+<span class="text-xs text-outline dark:text-slate-400 font-mono group-hover:text-on-surface dark:group-hover:text-white">/in/psych-tech-student</span>
+</a>
+<!-- Research / Blog -->
+<a class="border-[2px] border-on-surface dark:border-white shadow-[2.5px_2.5px_0px_#111827] dark:shadow-[2.5px_2.5px_0px_#ffffff] rounded-lg px-3 py-2 bg-surface-container-lowest dark:bg-[#0B0F19] hover:bg-[#FEF08A] dark:hover:bg-[#1E293B] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 transition-all duration-150 flex items-center justify-between group" href="https://medium.com" target="_blank" rel="noopener noreferrer">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg text-on-surface dark:text-white" data-icon="edit_note">edit_note</span>
+<span class="text-label-sm font-label-sm font-bold text-on-surface dark:text-white">Research / Blog</span>
+</div>
+<span class="text-xs text-outline dark:text-slate-400 font-mono group-hover:text-on-surface dark:group-hover:text-white">psychology.notes</span>
+</a>
+<!-- Spotify -->
+<a class="border-[2px] border-on-surface dark:border-white shadow-[2.5px_2.5px_0px_#111827] dark:shadow-[2.5px_2.5px_0px_#ffffff] rounded-lg px-3 py-2 bg-surface-container-lowest dark:bg-[#0B0F19] hover:bg-[#DCFCE7] dark:hover:bg-[#1E293B] hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 transition-all duration-150 flex items-center justify-between group" href="https://open.spotify.com" target="_blank" rel="noopener noreferrer">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-lg text-secondary" data-icon="headphones">headphones</span>
+<span class="text-label-sm font-label-sm font-bold text-on-surface dark:text-white">Spotify Playlist</span>
+</div>
+<span class="text-xs text-outline dark:text-slate-400 font-mono group-hover:text-on-surface dark:group-hover:text-white">Theatre &amp; Focus Classics</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+<!-- Bottom Section (Divided by a dashed line) -->
+<div class="border-t-2 border-dashed border-on-surface dark:border-slate-700 pt-6 mt-8">
+<div class="flex items-center justify-between mb-4">
+<span class="text-label-sm font-label-sm uppercase font-bold text-outline dark:text-slate-400 tracking-wider flex items-center gap-1.5">
+<span class="material-symbols-outlined text-sm" data-icon="monitoring">monitoring</span>
+            Scholastic Performance &amp; Activity Index
+          </span>
+<span class="text-label-sm font-label-sm font-bold text-secondary dark:text-emerald-400 flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-icon="verified">verified</span>
+            Live Records
+          </span>
+</div>
+<!-- 4 Metric counter boxes in responsive grid -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<!-- Box 1 -->
+<div class="border-[2px] border-on-surface dark:border-white shadow-[3px_3px_0px_#111827] dark:shadow-[3px_3px_0px_#ffffff] rounded-xl text-center p-3.5 bg-[#DCFCE7] dark:bg-[#064E3B] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-150">
+<div class="text-metric-number font-metric-number text-on-surface dark:text-[#A7F3D0]">2+</div>
+<div class="text-label-sm font-label-sm font-bold uppercase tracking-wider text-on-surface dark:text-slate-200 mt-1">Fields (Psych &amp; CS)</div>
+</div>
+<!-- Box 2 -->
+<div class="border-[2px] border-on-surface dark:border-white shadow-[3px_3px_0px_#111827] dark:shadow-[3px_3px_0px_#ffffff] rounded-xl text-center p-3.5 bg-[#E0F2FE] dark:bg-[#0C4A6E] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-150">
+<div class="text-metric-number font-metric-number text-on-surface dark:text-[#BAE6FD]">100%</div>
+<div class="text-label-sm font-label-sm font-bold uppercase tracking-wider text-on-surface dark:text-slate-200 mt-1">Analytical Rigor</div>
+</div>
+<!-- Box 3 -->
+<div class="border-[2px] border-on-surface dark:border-white shadow-[3px_3px_0px_#111827] dark:shadow-[3px_3px_0px_#ffffff] rounded-xl text-center p-3.5 bg-[#FEF08A] dark:bg-[#713F12] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-150">
+<div class="text-metric-number font-metric-number text-on-surface dark:text-[#FEF08A]">5+</div>
+<div class="text-label-sm font-label-sm font-bold uppercase tracking-wider text-on-surface dark:text-slate-200 mt-1">Core Tech &amp; Stats Skills</div>
+</div>
+<!-- Box 4 -->
+<div class="border-[2px] border-on-surface dark:border-white shadow-[3px_3px_0px_#111827] dark:shadow-[3px_3px_0px_#ffffff] rounded-xl text-center p-3.5 bg-[#FFE4E6] dark:bg-[#881337] hover:-translate-x-0.5 hover:-translate-y-0.5 transition-transform duration-150">
+<div class="text-metric-number font-metric-number text-on-surface dark:text-[#FECDD3]">∞</div>
+<div class="text-label-sm font-label-sm font-bold uppercase tracking-wider text-on-surface dark:text-slate-200 mt-1">Intellectual Curiosity</div>
+</div>
+</div>
+</div>
+<!-- Template Ribbon & GitHub Pages Badge -->
+<div class="mt-8 pt-4 border-t-[2px] border-on-surface dark:border-white flex flex-wrap items-center justify-between gap-3 text-body-sm font-body-sm">
+<div class="flex items-center gap-2">
+<span class="border-[1.5px] border-on-surface dark:border-white px-2 py-0.5 rounded bg-surface-container dark:bg-[#1E293B] dark:text-white text-xs font-mono font-bold">
+            REPO: student/profile-card
+          </span>
+<span class="text-outline dark:text-slate-400 text-xs">HOSTED ON GITHUB PAGES</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded border-[1.5px] border-on-surface dark:border-white shadow-[1.5px_1.5px_0px_#111827] dark:shadow-[1.5px_1.5px_0px_#ffffff] bg-surface-container-lowest dark:bg-[#0B0F19] dark:text-white hover:bg-surface-container-high dark:hover:bg-[#1E293B] text-xs font-bold transition-all active:translate-x-0.5 active:translate-y-0.5 flex items-center gap-1 cursor-pointer" id="toast-copy-btn">
+<span class="material-symbols-outlined text-xs" data-icon="link">link</span>
+            Copy Card Link
+          </button>
+<a class="px-2.5 py-1 rounded border-[1.5px] border-on-surface dark:border-white shadow-[1.5px_1.5px_0px_#111827] dark:shadow-[1.5px_1.5px_0px_#ffffff] bg-primary-container dark:bg-primary text-on-surface dark:text-[#0B0F19] text-xs font-bold transition-all hover:-translate-x-0.5 hover:-translate-y-0.5 active:translate-x-0.5 active:translate-y-0.5 flex items-center gap-1" href="https://github.com" rel="noopener noreferrer" target="_blank">
+<span class="material-symbols-outlined text-xs" data-icon="fork_right">fork_right</span>
+            Fork on GitHub
+          </a>
+</div>
+</div>
+</section>
+</main>
+<!-- Notification Toast (Hidden by default, triggered on click) -->
+<div class="fixed bottom-6 right-6 border-[2.5px] border-on-surface dark:border-white bg-secondary-container dark:bg-[#064E3B] text-on-surface dark:text-[#A7F3D0] px-4 py-2.5 rounded-xl shadow-[4px_4px_0px_#111827] dark:shadow-[4px_4px_0px_#ffffff] font-bold text-sm hidden items-center gap-2 z-50" id="toast">
+<span class="material-symbols-outlined text-lg" data-icon="check_circle">check_circle</span>
+<span id="toast-msg" class="">Copied to clipboard!</span>
+</div>
+<!-- Footer (Shared Component JSON anchor) -->
+<footer class="w-full bg-surface-container-low dark:bg-[#080C14] border-t-[2.5px] border-on-surface dark:border-slate-800">
+<div class="w-full max-w-5xl mx-auto px-margin-mobile md:px-margin py-space-lg flex flex-col md:flex-row justify-between items-center gap-space-md">
+<!-- Copyright text exact match from JSON -->
+<div class="text-body-sm font-body-sm text-on-surface-variant dark:text-slate-400 font-bold text-center md:text-left">
+        © 2026 SCHOLASTIC PROFILE • BUILT FOR GITHUB PAGES • VERIFIED IDENTITY
+      </div>
+<!-- Footer links exact match from JSON -->
+<nav class="flex flex-wrap items-center justify-center gap-4 text-label-sm font-label-sm">
+<a class="text-on-surface-variant dark:text-slate-400 hover:text-on-surface dark:hover:text-white font-semibold hover:underline transition-all active:opacity-80" href="#source-code">
+          Source Code
+        </a>
+<a class="text-on-surface-variant dark:text-slate-400 hover:text-on-surface dark:hover:text-white font-semibold hover:underline transition-all active:opacity-80" href="#academic-integrity">
+          Academic Integrity
+        </a>
+<a class="text-on-surface-variant dark:text-slate-400 hover:text-on-surface dark:hover:text-white font-semibold hover:underline transition-all active:opacity-80" href="#verify-hash">
+          Verify Hash
+        </a>
+<a class="text-on-surface-variant dark:text-slate-400 hover:text-on-surface dark:hover:text-white font-semibold hover:underline transition-all active:opacity-80" href="#rss">
+          RSS
+        </a>
+</nav>
+</div>
+</footer>
+<!-- Micro-interactions Script (Copy to clipboard toast & Theme toggle) -->
+<script>
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toast-msg');
+
+    function showToast(message) {
+      toastMsg.innerText = message;
+      toast.classList.remove('hidden');
+      toast.classList.add('flex');
+      setTimeout(() => {
+        toast.classList.add('hidden');
+        toast.classList.remove('flex');
+      }, 2500);
+    }
+
+    // Theme Toggle Handler
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+    const themeText = document.getElementById('theme-text');
+
+    function updateThemeUI(isDark) {
+      if (themeIcon) {
+        themeIcon.innerText = isDark ? 'light_mode' : 'dark_mode';
+      }
+      if (themeText) {
+        themeText.innerText = isDark ? 'LIGHT MODE' : 'DARK MODE';
+      }
+    }
+
+    // Set initial UI state based on document root class
+    updateThemeUI(document.documentElement.classList.contains('dark'));
+
+    if (themeToggle) {
+      themeToggle.addEventListener('click', () => {
+        const isDark = document.documentElement.classList.toggle('dark');
+        document.documentElement.classList.toggle('light', !isDark);
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        updateThemeUI(isDark);
+        showToast(isDark ? 'Dark mode enabled 🌙' : 'Light mode enabled ☀️');
+      });
+    }
+
+    // Copy Email from Top Bar
+    const copyTopBtn = document.getElementById('copy-email-top-btn');
+    if (copyTopBtn) {
+      copyTopBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText('student.psych@university.edu.tw');
+        showToast('Email copied to clipboard!');
+      });
+    }
+
+    // Copy Email from Profile Pill
+    const emailPill = document.getElementById('email-copy-pill');
+    if (emailPill) {
+      emailPill.addEventListener('click', (e) => {
+        if (e.target.closest('.material-symbols-outlined')) {
+          e.preventDefault();
+          navigator.clipboard.writeText('student.psych@university.edu.tw');
+          showToast('Email address copied!');
+        }
+      });
+    }
+
+    // Copy Link from Bottom template badge
+    const copyLinkBtn = document.getElementById('toast-copy-btn');
+    if (copyLinkBtn) {
+      copyLinkBtn.addEventListener('click', () => {
+        navigator.clipboard.writeText(window.location.href);
+        showToast('Card URL copied to clipboard!');
+      });
+    }
+  </script>
+
+
+</body></html>
